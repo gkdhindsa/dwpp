@@ -105,6 +105,17 @@ userSchema.virtual('collections', {
     foreignField: 'owner'
 })
 
+userSchema.pre('save', async function(next){
+    const user=this
+
+    //hash password
+    if(user.isModified('password')){
+        user.password=await bcrypt.hash(user.password, 8)
+    }
+
+    next()
+
+})
 
 const User = mongoose.model('User', userSchema)
 

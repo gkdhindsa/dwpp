@@ -47,6 +47,7 @@ router.get('/collections', async (req,res)=>{
     
     try{
          let _id=req.params.id 
+         
          const col=await Collection.findOneAndUpdate({ _id: _id }, { $push: { images: req.body } }, {new: true, runValidators: true })
          if(!col){
              return res.status(404).send()
