@@ -11,6 +11,7 @@ const CollectionRouter=require('./routers/collections')
 const app = express()
 const port = process.env.PORT 
 
+
 //parses incoming json to an object
 app.use(express.json())
 app.use(UserRouter)
@@ -21,7 +22,3 @@ app.use(CollectionRouter)
 app.listen(port, () => {
     console.log('Server is up on port ' + port)
 })
-
-const myFunction=async()=>{
-    
-}
