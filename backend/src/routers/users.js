@@ -97,5 +97,19 @@ router.post('/users/login', async(req,res)=>{
        res.status(400).send() 
    }
 })
+//Logout
+router.post('/users/logout', auth, async(req,res)=>{
+    try {
+        console.log(req.token)
+        req.user.tokens = req.user.tokens.filter((token) => {
+            return token.token !== req.token
+        })
+        await req.user.save()
+
+        res.send()
+    } catch (e) {
+        res.status(500).send()
+    }
+})
 
 module.exports=router
