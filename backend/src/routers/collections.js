@@ -71,6 +71,27 @@ router.delete('/collections/:id', async(req, res)=>{
        return res.status(400).send()
     }
 })
+//delete and image from a collection
+router.delete('/collections/:collectionId/images/:imageId', async(req, res)=>{
+    
+    try{
+        
+         let collectionId=req.params.collectionId 
+         let imageId=req.params.imageId
+       
+         let result = await Collection.updateOne(
+            { _id: collectionId},
+            {
+              $pull: { "images": { _id: imageId} }
+            }
+          );
+    
+          res.send(result);
+    }catch(e){
+       return res.status(400).send()
+    }
+})
+
 
 
 module.exports=router

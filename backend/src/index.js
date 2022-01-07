@@ -12,6 +12,7 @@ const app = express()
 const port = process.env.PORT 
 
 
+
 //parses incoming json to an object
 app.use(express.json())
 app.use(UserRouter)
