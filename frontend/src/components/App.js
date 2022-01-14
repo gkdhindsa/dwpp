@@ -1,28 +1,22 @@
 import React from 'react';
-import Signup from './Signup';
-import Dashboard from './Dashboard';
-import {Container} from 'react-bootstrap'
-import { AuthProvider } from '../contexts/AuthContext';
-import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
+import NotFound from './NotFound';
+import Home from './Home';
+// import Navbar from './Navbar';
+import {
+  BrowserRouter as Router,
+  Route,
+  Routes
+} from "react-router-dom";
 
 function App() {
   return (
-  
-      <Container className="flex-box align-items-center justify-content-center">
-        <Router>
- 
-          <Routes>
-            <Route exact path="/" component='Dashboard'/>
-            <Route path="/signup" component='Signup'/>
+    <Router>
+      <Routes>
+        <Route exact path= "/" element={<Home/>}/>
+        <Route path="*" element={<NotFound/>}/>
+      </Routes>
 
-          </Routes>
-      
-        </Router>
-      <Signup/>
-      </Container>
-
-    
-    
+    </Router>
   )
 }
 

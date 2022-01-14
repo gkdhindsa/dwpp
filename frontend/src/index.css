@@ -1,0 +1,57 @@
+@import url("https://cdn.jsdelivr.net/npm/@xz/fonts@1/serve/plus-jakarta-display.min.css");
+
+/* Body styles */
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body, button{
+    font-family: 'Plus Jakarta Display', sans-serif;
+}
+/* General Styles */
+.container{
+    max-width: 900px;
+    padding: 5rem 2rem ;
+    margin: 0 auto;
+}
+h1{
+    font-weight: 800;
+    font-size: 3.5rem;
+}
+.pinkText{
+    color: #F93C67;
+}
+.center{
+    text-align: center;
+}
+/* Home Page Styles */
+
+.pawsDesktop{
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+}
+
+.btn{
+    padding: 0.75rem 2rem;
+    min-width: 250px;
+    max-width: 100%;
+    font-size: 1.5rem;
+    border-radius: 5px;
+}
+.btn:hover{
+    cursor: pointer;
+}
+.space{
+    padding: 0 1rem;
+}
+.btnWhite{
+    background-color: #fff;
+    border: 1px solid #F93C67;    
+}
+.btnPink{
+    background-color: #F93C67;
+    border: 1px solid #F93C67;   
+    color: #fff;   
+}
