@@ -8,6 +8,7 @@ require('./db/mongoose')
 const UserRouter=require('./routers/users')
 const CollectionRouter=require('./routers/collections')
 const SearchRouter=require('./routers/search')
+const MLRouter=require('./routers/ml')
 
 const app = express()
 const port = process.env.PORT 
