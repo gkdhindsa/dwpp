@@ -1,12 +1,15 @@
 @import url("https://cdn.jsdelivr.net/npm/@xz/fonts@1/serve/plus-jakarta-display.min.css");
 
 /* Body styles */
+*{
+    box-sizing: border-box;
+}
 body{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-body, button{
+body, button, input{
     font-family: 'Plus Jakarta Display', sans-serif;
 }
 /* General Styles */
@@ -31,6 +34,7 @@ h1{
     position: absolute;
     bottom: 0px;
     width: 100%;
+    z-index: -1;
 }
 
 .btn{
@@ -40,7 +44,7 @@ h1{
     font-size: 1.5rem;
     border-radius: 5px;
 }
-.btn:hover{
+.btn:hover, button:hover, button:focus{
     cursor: pointer;
 }
 .space{
@@ -54,4 +58,63 @@ h1{
     background-color: #F93C67;
     border: 1px solid #F93C67;   
     color: #fff;   
+}
+/* Login Page */
+.main-container{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.part-container-1, .part-container-2
+{
+    display: inline;
+    height: 100%;
+}
+.part-container-1{
+    width: 40%;
+}
+
+.content{
+    display: flex;
+     height: 100%; /* not working */
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+   
+}
+
+
+.pink-container{
+    background-color: #FFECF2;
+}
+.part-container-2{
+    width: 60%;
+}
+.input-container{
+    width: 100% !important; 
+}
+
+.back{
+    position: absolute;
+}
+label, input{
+    display: block;
+    font-size: 1.5rem
+}
+label{
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+.input-container-inside{
+    margin-bottom: 2rem;
+}
+input{
+    border: none;
+    background-color: #FFECF2;
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+    color: #000;
+    width: 100%;
 }
